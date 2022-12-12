@@ -70,7 +70,8 @@ public class BasicWordDetectorApplication implements CommandLineRunner {
         long start = System.currentTimeMillis();
         startThreads(loaderTemplate, detectorTemplate, reporterTemplate);
         watchQueues(queues, runnables);
-        long end = System.currentTimeMillis();
+        //long end = System.currentTimeMillis();
+        long end = watchQueues(queues, runnables);
         log.info(Constants.MAIN_TOTAL_TIME, (end - start));
     }
 
@@ -79,14 +80,17 @@ public class BasicWordDetectorApplication implements CommandLineRunner {
 
         List<Thread> threads = new ArrayList<>();
         Thread loader1 = new Thread(loaderTemplate);
+        loader1.setName("LOADER");
         threads.add(loader1);
 
         for (int i = 0; i < Integer.valueOf(analyzerThreadsNumber); i++) {
             Thread detector = new Thread(detectorTemplate);
+            detector.setName("DETECTOR-" + i);
             threads.add(detector);
         }
 
         Thread reporter1 = new Thread(reporterTemplate);
+        reporter1.setName("REPORTER");
         threads.add(reporter1);
 
         for (Thread t: threads) {
@@ -94,7 +98,8 @@ public class BasicWordDetectorApplication implements CommandLineRunner {
         }
     }
 
-    private void watchQueues(List<CandidatesQueue> queues, List<CustomRunnable> threads){
+    private long watchQueues(List<CandidatesQueue> queues, List<CustomRunnable> threads){
+        long end = -1;
         try {
             Thread.sleep(2000); // Waiting two seconds, for the queues to have at least 1 value
         } catch (InterruptedException e) {
@@ -109,8 +114,10 @@ public class BasicWordDetectorApplication implements CommandLineRunner {
                 for (CustomRunnable thread: threads) {
                     thread.terminate();
                 }
+                end = System.currentTimeMillis();
                 break; // Queues emptied.
             }
         }
+        return end;
     }
 }
