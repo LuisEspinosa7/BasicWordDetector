@@ -33,7 +33,7 @@ public class SuspiciousDetector implements CustomRunnable {
                 break;
             }
 
-            log.info(Constants.DETECTOR_RUNNING);
+            log.debug(Constants.DETECTOR_RUNNING);
 
             if (analyzer.analyze(candidate.get().getMessage())){
                 log.info(Constants.DETECTOR_FOUND_FORBBIDEN_WORD, candidate.get().getConversationId());

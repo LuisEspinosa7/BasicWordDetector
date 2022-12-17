@@ -27,7 +27,7 @@ public class ChatLineProvider extends SequentialProvider<Candidate, Scanner> {
         String[] nextLine = source.nextLine().split(Constants.COLON);
         String[] messageArray = Arrays.copyOfRange(nextLine, 1, nextLine.length);
         String message = Arrays.toString(messageArray).replace(Constants.KEY_OPENED, Constants.EMPTY).replace(Constants.KEY_CLOSED, Constants.EMPTY);
-        log.info("CANDIDATE: " + message);
+        log.debug("CANDIDATE: " + message);
 
         Candidate candidate = new Candidate(nextLine[0], message);
         return Optional.of(candidate);

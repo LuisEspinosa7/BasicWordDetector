@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  word-detector:
+    #image: basic-word-detector:1.0
+    image: luisllanos8/basic-word-detector:1.0
+    container_name: "basic-word-detector"
+    hostname: basic-word-detector-host
+    environment:
+      - ANALYZER_THREADS_NUMBER=2
+      - CANDIDATES_CAPACITY=100
+      - FORBBIDEN_WORDS_FILE=/mnt/detector/forbbiden.csv
+      #- SOURCE_FILE=/mnt/detector/topical_chat_short.csv
+      - SOURCE_FILE=/mnt/detector/topical_chat_big.csv
+      - SUSPICIOUS_CAPACITY=10
+      - TARGET_FILE=/mnt/detector/result.csv
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
+    volumes:
+      - D:/Development/Intellij-Workspace/BASIC-WORD-DETECTOR/files:/mnt/detector
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 60M
+        reservations:
+          cpus: 0.5
+          memory: 20M
+
+networks:
+  my-network:
+    driver: bridge

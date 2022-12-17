@@ -21,7 +21,7 @@ public class CandidatesQueue {
     public synchronized void add(Candidate candidate){
         while (queue.size() == this.capacity){
             try {
-                System.out.println(Thread.currentThread().getName() + " Waiting....");
+                log.debug(Thread.currentThread().getName() + " Waiting....");
                 wait();
             } catch (InterruptedException e){}
         }
