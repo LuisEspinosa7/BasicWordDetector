@@ -1,11 +1,13 @@
 package com.lsoftware.basicworddetector.queues;
 
 import com.lsoftware.basicworddetector.model.Candidate;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.LinkedList;
 import java.util.Optional;
 import java.util.Queue;
 
+@Slf4j
 public class CandidatesQueue {
     private Queue<Candidate> queue = new LinkedList<>();
     private boolean isEmpty = true;
@@ -23,7 +25,7 @@ public class CandidatesQueue {
                 wait();
             } catch (InterruptedException e){}
         }
-        System.out.println("Adding new one.");
+        log.debug("Adding new one.");
         queue.add(candidate);
         isEmpty = false;
         notify();
@@ -42,7 +44,7 @@ public class CandidatesQueue {
 
         if (queue.size() == 0 && isTerminate) return Optional.empty();
 
-        System.out.println("QUEUE SIZE: " + queue.size());
+        log.debug("QUEUE SIZE: " + queue.size());
 
         candidate = queue.remove();
         if (queue.size() == capacity - 1) {

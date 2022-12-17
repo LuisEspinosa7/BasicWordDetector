@@ -3,6 +3,7 @@ package com.lsoftware.basicworddetector.providers.impl;
 import com.lsoftware.basicworddetector.model.Candidate;
 import com.lsoftware.basicworddetector.providers.SequentialProvider;
 import com.lsoftware.basicworddetector.util.Constants;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

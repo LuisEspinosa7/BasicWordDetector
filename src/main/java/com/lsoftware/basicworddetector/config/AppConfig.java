@@ -30,7 +30,7 @@ public class AppConfig {
                 words.add(line);
             }
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(Constants.FILE_NOT_FOUND, e);
+            throw new RuntimeException(Constants.FORBBIDEN_FILE_NOT_FOUND, e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -44,7 +44,7 @@ public class AppConfig {
             File inputFile = new File(candidatesSourceFile);
             scanner = new Scanner(new FileReader(inputFile));
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(Constants.FILE_NOT_FOUND, e);
+            throw new RuntimeException(Constants.CANDIDATES_SOURCE_FILE_NOT_FOUND, e);
         }
         return scanner;
     }
@@ -56,7 +56,7 @@ public class AppConfig {
         try {
             writer = new FileWriter(suspiciousTargetFile);
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(Constants.FILE_NOT_FOUND, e);
+            throw new RuntimeException(Constants.SUSPICIOUS_TARGET_FILE_NOT_FOUND, e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

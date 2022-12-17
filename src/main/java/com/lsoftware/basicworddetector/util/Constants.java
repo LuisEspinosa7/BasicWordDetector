@@ -9,7 +9,9 @@ public interface Constants {
     String EMPTY = " ";
     String KEY_OPENED = "[";
     String KEY_CLOSED = "]";
-    String FILE_NOT_FOUND = "The forbbiden words file was not found.";
+    String FORBBIDEN_FILE_NOT_FOUND = "The forbbiden words file was not found.";
+    String CANDIDATES_SOURCE_FILE_NOT_FOUND = "The candidates source file was not found.";
+    String SUSPICIOUS_TARGET_FILE_NOT_FOUND = "The suspicious target file was not found.";
     String SENDING_SUSPICIOUS = "Sending suspicious record to a file";
     String LOADER_NO_MORE_CANDIDATES = "CandidatesLoader::There are no more candidates!!!";
 

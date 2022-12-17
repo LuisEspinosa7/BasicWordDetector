@@ -70,7 +70,6 @@ public class BasicWordDetectorApplication implements CommandLineRunner {
         long start = System.currentTimeMillis();
         startThreads(loaderTemplate, detectorTemplate, reporterTemplate);
         watchQueues(queues, runnables);
-        //long end = System.currentTimeMillis();
         long end = watchQueues(queues, runnables);
         log.info(Constants.MAIN_TOTAL_TIME, (end - start));
     }
