@@ -112,8 +112,8 @@ Some pictures of the project on a local environment respectively:
 This project should be installed using the following command:
 ```bash
 mvn clean install (inside the project)
-docker build -t basic-word-detector:1.0 . (inside the target folder or use my image ZZZZZZ)
-docker-compose up -d (Modify as per your convenience)
+docker build -t basic-word-detector:1.0 . (inside the target folder or use my image luisllanos8/basic-word-detector:1.0)
+docker-compose up (Modify as per your convenience)
 ```
 
 ## Usage
