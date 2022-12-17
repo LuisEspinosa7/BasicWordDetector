@@ -84,13 +84,14 @@ I provide the following resources:
 ## Pictures
 Some pictures of the project on a local environment respectively:
 
+
 <table style="width:100%">
   <tr>
     <td>
-  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/167336671-402551f1-1907-4c88-ada4-927288213f58.PNG">
+  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/208266427-bed31ef4-6fe0-45ba-b647-b49342f1e857.png">
 	  </td>
     <td>
-  	<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/167336691-b03a5a61-1b1f-4c07-9fc4-23f528753682.PNG">
+  	<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/208266441-3d5f189f-2740-403d-b8b2-ce53a7a14e77.PNG">
     </td>
   </tr>
 </table>
@@ -98,11 +99,21 @@ Some pictures of the project on a local environment respectively:
 <table style="width:100%">
   <tr>
     <td>
-  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/167336730-9ad38708-970f-41f2-9900-21f66e06448a.png">
+  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/208266450-81009e6e-3631-45e9-b446-f9c10c461606.PNG">
 	  </td>
     <td>
-	<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/167337632-4a11cfc0-fcb9-4acd-abba-0cf696e17d02.PNG">
+  	<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/208266460-e91125b4-bece-4424-bd3c-ecff031512c2.PNG">
     </td>
+  </tr>
+</table>
+
+
+<table style="width:100%">
+  <tr>
+    <td>
+  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/208266475-1dc86f65-b49d-4d30-8381-d3fe8165f6b0.PNG">
+	  </td>
+    
   </tr>
 </table>
 
