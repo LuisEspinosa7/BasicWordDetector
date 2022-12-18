@@ -56,7 +56,7 @@ multi-thread approach with manual backpressure, it was used the following techno
 ## Video
 A video exposing the functionality of the project in a local environment on a Desktop screen.
 
-1. https://youtu.be/Mc5IMID86yE
+1. https://youtu.be/WH3kOYnm6bM
 
 ## Development Resources
 I provide the following resources:
